@@ -289,6 +289,11 @@ body {
     font-size: 2rem;
   }
 
+  .fab {
+    color: white;
+    padding: 0 10px;
+  }
+
   .container {
     padding: 0 1rem;
   }
