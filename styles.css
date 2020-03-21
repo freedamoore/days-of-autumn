@@ -254,7 +254,9 @@ body {
   .EP-heading {
     grid-column: span 2;
   }
-
+  .bkg-img {
+    grid-column: span 2;
+  }
   .item-4, .item-5, .item-6, .item-7 {
     grid-column: span 2;
   }
@@ -342,7 +344,7 @@ body {
   }
 
   .video {
-    width: 400px;
-    height: 225px;
+    width: 350px;
+    height: 196px;
   }
 }
