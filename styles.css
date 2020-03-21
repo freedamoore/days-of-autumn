@@ -254,9 +254,11 @@ body {
   .EP-heading {
     grid-column: span 2;
   }
+
   .bkg-img {
     grid-column: span 2;
   }
+
   .item-4, .item-5, .item-6, .item-7 {
     grid-column: span 2;
   }
@@ -362,9 +364,11 @@ body {
 
   .member-name {
     font-size: 0.7rem;
+    padding: 1rem;
   }
 
   .member-role {
     font-size: 0.6rem;
+    padding: 1rem;
   }
 }
