@@ -262,6 +262,38 @@ body {
   .item-4, .item-5, .item-6, .item-7 {
     grid-column: span 2;
   }
+
+  .item-1 {
+    order: 1;
+  }
+
+  .item-2 {
+    order: 2;
+  }
+
+  .item-3 {
+    order: 3
+  }
+
+  .item-4 {
+    order: 5;
+  }
+
+  .item-5 {
+    order: 4;
+  }
+
+  .item-6 {
+    order: 6;
+  }
+
+  .item-7 {
+    order: 7;
+  }
+
+  .item-8 {
+    order: 8;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -302,37 +334,14 @@ body {
 
   .item-1 {
     height: 60vh;
-    order: 1;
   }
 
   .item-2 {
     height: 60vh;
-    order: 2;
   }
 
   .item-3 {
     grid-template-columns: 1fr;
-    order: 3
-  }
-
-  .item-4 {
-    order: 5;
-  }
-
-  .item-5 {
-    order: 4;
-  }
-
-  .item-6 {
-    order: 6;
-  }
-
-  .item-7 {
-    order: 7;
-  }
-
-  .item-8 {
-    order: 8;
   }
 
   .EP-heading {
