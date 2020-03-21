@@ -1,3 +1,9 @@
+:root {
+  --color-main: #222323;
+  --color-highlight-1: #19C8A9;
+  --color-highlight-2: #F1017C;
+}
+
 *,
 *::before,
 *::after {
@@ -7,7 +13,7 @@
 }
 
 body {
-  background-color: #222323;
+  background-color: var(--color-main);
   box-sizing: border-box;
   color: white;
   font-family: 'Raleway', sans-serif;
@@ -21,19 +27,18 @@ body {
 }
 
 .band-name {
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: 'Dancing Script', cursive;
   white-space: nowrap;
+  background-image: url(images/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .social {
   font-size: 3rem;
   text-align: right;
-}
-
-.social a:hover {
-  transform: translateY(-.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 }
 
 .fab {
@@ -42,8 +47,12 @@ body {
 }
 
 .fab:hover {
-  transform: translateY(-.3rem) scale(1.1);
-  color: goldenrod;
+  transform: scale(1.1);
+  /* color: var(--color-highlight-1); */
+  background-image: linear-gradient(to right top, var(--color-highlight-1), var(--color-highlight-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .container {
@@ -54,23 +63,20 @@ body {
 
 .item {
   /* height: 200px; */
-
 }
 
 .item-1 {
-  /* background-color: red; */
   height: 80vh;
 }
 
 .item-2 {
-  /* background-color: blue; */
   height: 80vh;
 }
 
 .tom {
   background-image: linear-gradient(310deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, .9) 30%,
+    rgba(34, 35, 35, 1) 0%,
+    rgba(34, 35, 35, .9) 30%,
     transparent 60%),
     url(images/tom.png);
   background-repeat: no-repeat;
@@ -84,8 +90,8 @@ body {
 
 .ryan {
   background-image: linear-gradient(50deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, .9) 30%,
+    rgba(34, 35, 35, 1) 0%,
+    rgba(34, 35, 35, .9) 30%,
     transparent 60%),
     url(images/ryan.png);
   background-repeat: no-repeat;
@@ -109,18 +115,19 @@ body {
 }
 
 .member-name {
+  font-size: 1.5rem;
   text-transform: uppercase;
   padding: 1rem 2rem;
 }
 
 .member-role {
+  font-size: 1.2rem;
   display: block;
   padding: 1rem 2rem;
   ;
 }
 
 .item-3 {
-  /* background-color: purple; */
   grid-column: span 2;
   padding: 3rem 0;
   display: grid;
@@ -129,7 +136,18 @@ body {
   justify-items: center;
 }
 
-.EP-heading{
+.header {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  padding: 2rem 0;
+}
+
+.bkg-img {
+  grid-column: span 3;
+  width: 10%;
+}
+
+.EP-heading {
   grid-column: span 3;
 }
 
@@ -137,40 +155,61 @@ body {
   grid-row: span 2;
 }
 
-.description{
+.description {
+  display: inline-block;
   font-size: 2rem;
   font-family: 'Dancing Script', cursive;
   padding: 5rem 3rem 3rem 3rem;
+  background-image: linear-gradient(to right top, var(--color-highlight-1), var(--color-highlight-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.item-4 {
-  /* background-color: yellow; */
+.item-4, .item-6 {
   text-align: center;
-    padding: 3rem 0;
+  padding: 3rem 0;
 }
 
-.item-5 {
-  /* background-color: green; */
-}
-
-.item-6 {
-  /* background-color: orange; */
-}
-
-.item-7 {
-  /* background-color: pink; */
+.item-5, .item-7 {
   text-align: center;
-    padding: 3rem 0;
 }
+
 .item-8 {
-  /* background-color: blue; */
   grid-column: span 2;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.contact {
+  display: inline;
+}
+
+.message {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.message:hover {
+  background-image: linear-gradient(to right top, var(--color-highlight-1), var(--color-highlight-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .footer {
-  /* background-color: orangered; */
   padding: 3rem;
   text-align: center;
+}
+
+#copyright {
+  font-size: 0.5rem;
+  padding-top: 3rem;
+}
+
+.padding-top {
+  padding-top: 3rem;
 }
 
 @keyframes moveInLeft {
@@ -212,13 +251,13 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .EP-heading{
-    grid-column: span 2;
-  }
-  .item-4, .item-5, .item-6, .item-7 {
+  .EP-heading {
     grid-column: span 2;
   }
 
+  .item-4, .item-5, .item-6, .item-7 {
+    grid-column: span 2;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -227,9 +266,25 @@ body {
     align-items: center;
   }
 
+  .band-name {
+    font-size: 3rem;
+  }
+
   .social {
     font-size: 2rem;
     padding-top: 20px;
+  }
+
+  .member-name {
+    font-size: 0.9rem;
+  }
+
+  .member-role {
+    font-size: 0.8rem;
+  }
+
+  .header {
+    font-size: 2rem;
   }
 
   .container {
@@ -238,17 +293,56 @@ body {
 
   .item-1 {
     height: 60vh;
+    order: 1;
   }
 
   .item-2 {
     height: 60vh;
+    order: 2;
   }
 
   .item-3 {
     grid-template-columns: 1fr;
+    order: 3
   }
 
-  .EP-heading{
+  .item-4 {
+    order: 5;
+  }
+
+  .item-5 {
+    order: 4;
+  }
+
+  .item-6 {
+    order: 6;
+  }
+
+  .item-7 {
+    order: 7;
+  }
+
+  .item-8 {
+    order: 8;
+  }
+
+  .EP-heading {
     grid-column: span 1;
+  }
+
+  .bkg-img {
+    grid-column: span 1;
+  }
+
+  .description {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+    padding: 2rem 1rem 0 0;
+  }
+
+  .video {
+    width: 400px;
+    height: 225px;
   }
 }

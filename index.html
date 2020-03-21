@@ -9,6 +9,7 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/d23941fe54.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico">
   <title>Days of Autumn</title>
 </head>
 
@@ -24,30 +25,46 @@
   <main class="container">
     <div class="item item-1">
       <div class="tom">
-        <h3 class="member member-tom"><span class="member-name">Tom Moore</span><span class="member-role">Singer/Guitarist</span></h3>
+        <h3 class="member member-tom"><span class="member-name">Tom Moore</span><span class="member-role">Vocals, Guitar</span></h3>
       </div>
     </div>
     <div class="item item-2">
       <div class="ryan">
-        <h3 class="member member-ryan"><span class="member-name">Ryan Potter</span><span class="member-role">Guitarist</span></h3>
+        <h3 class="member member-ryan"><span class="member-name">Ryan Potter</span><span class="member-role">Guitar</span></h3>
       </div>
     </div>
     <div class="item item-3">
-      <h2 class="EP-heading">EPs</h2>
+      <img src="images/bkg1.png" class="bkg-img" alt="splash of color for background">
+      <h2 class="header EP-heading">EPs</h2>
       <iframe src="https://open.spotify.com/embed/album/7gbSci9NJhpD9jmxTGEJQE" width="300" height="180" frameborder="0" allowtransparency="true" allow="encrypted-media" class="EP-1"></iframe>
       <iframe src="https://open.spotify.com/embed/album/3wTn98T9dT4k8D2bzvvgRq" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="EP-2"></iframe>
       <iframe src="https://open.spotify.com/embed/album/5nxA5hgcYg31uF1uARoxGm" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="EP-3"></iframe>
       <iframe src="https://open.spotify.com/embed/album/7ailZhHHgt7PKTeiDpxG5b" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="EP-4"></iframe>
       <iframe src="https://open.spotify.com/embed/album/6vb23wy5dGJJMmKZeL40RB" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="EP-5"></iframe>
+      <img src="images/bkg2.png" class="bkg-img padding-top" alt="splash of color for background">
     </div>
-    <div class="item item-4"><iframe width="560" height="315" src="https://www.youtube.com/embed/dR7_EGNa8N4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-    <div class="item item-5"><h3 class="description">Our video for our song "Eighties" from our "Changing Seasons" EP</h3></div>
-    <div class="item item-6"><h3 class="description">Our cover of Ocean Eyes by Billie Eilish.</h3></div>
-    <div class="item item-7"><iframe width="560" height="315" src="https://www.youtube.com/embed/OfO5M3FvvBQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-    <div class="item item-8">Contact <p>We're Days of Autumn, an indie duo from Liverpool, England. If you like what you hear, get in touch. </p></div>
+    <div class="item item-4 "><iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/dR7_EGNa8N4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="item item-5">
+      <h3 class="description">Our video for our song "Eighties" from our "Changing Seasons" EP</h3>
+    </div>
+    <div class="item item-6">
+      <h3 class="description">Our cover of Ocean Eyes by Billie Eilish.</h3>
+    </div>
+    <div class="item item-7"><iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/OfO5M3FvvBQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="item item-8">
+      <img src="images/bkg3.png" class="bkg-img" alt="splash of color for background">
+      <h2 class="header">Contact</h2>
+      <p class="contact">We're Days of Autumn, an indie duo from Liverpool, England. If you like what you hear, get in touch via </p>
+      <a class="message" href="https://m.me/DaysofAutumnBand?fbclid=IwAR0UuDRhaTOS7O0BBKPiY1lcn3ojbPdcO4JZGnbwWAOvaNDZ0wENhBqp9BA">Facebook Messenger<i class="fab fa-facebook-messenger"></i></a>
+    </div>
   </main>
   <footer class="footer">
     <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:78JolvEPOFMbkpcGTegXcm&size=detail&theme=dark&show-count=0" width="200" height="56" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+    <p id="copyright"></p>
+      <script>
+        document.getElementById("copyright").innerHTML = "© Copyright Days of Autumn " + new Date().getFullYear();
+      </script>
+
   </footer>
 </body>
 
